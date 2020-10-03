@@ -1,0 +1,44 @@
+
+<div class="mt-5 alert alert-dismissible alert-info">
+  <h4 class="alert-heading">Aviso!</h4>
+  <p class="mb-0">Esta pestaña muestra lo que seria el pdf para descargar el informe clickear el siguiente boton:</p>
+  <button (click)="generarPDF()" class="btn btn-warning" data-dismiss="alert">GENERAR PDF</button>
+</div>
+<div id="informe" class="col-md-12 mt-2 d-flex justify-content-center">
+  <div class="col-md-10 fondo pt-5 mb-0 border-top border-right border-left shadow-lg rounded text-center">
+      <h1 class="mb-5">INFORME 3/10/2020</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <app-informacion></app-informacion>
+          </div>
+      
+          <!--DEMANDA-->
+          <div class="col-md-8 text-center">
+            <app-demanda></app-demanda>
+          </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-md-6 text-center">
+            <h1>Valor GW Ultimas 24 Horas</h1>
+            <!--PASAR A MODULOS (VALOR GW)-->
+            <div class="card w-100" style="width: 18rem;">
+      
+              <!--GRAFICA VALOR-->
+              <app-valor></app-valor>
+      
+            </div>
+          </div>
+          <div class="col-md-6 text-center">
+            <h1>GW Generados Ultimas 24 horas</h1>
+            <!--PASAR A MODULOS (GW GENERADOS)-->
+            <div class="card w-100" style="width: 18rem;">
+      
+              <!--GRAFICA PRODUCCION-->
+              <app-produccion></app-produccion>
+      
+            </div>
+          </div>
+    </div>
+  </div>
+</div>

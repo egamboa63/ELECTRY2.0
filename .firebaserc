@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "electry-ab879": {
+      "hosting": {
+        "ELECTRY": [
+          "electry-ab879"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+<div id="prueba" *ngIf="this.appcomponent.islogged" class="col-md-12 d-flex justify-content-center mt-5">
+  <div class="col-md-10 fondo pt-5 mb-0 border-top border-right border-left shadow-lg rounded row">
+    <div class="col-md-2">
+      <app-informacion></app-informacion>
+    </div>
+
+    <!--DEMANDA-->
+    <div class="col-md-8 text-center">
+      <app-demanda></app-demanda>
+    </div>
+
+    <div class="col-md-2">
+      <h2>OPCIONES</h2>
+      <div class="form-group">
+        <fieldset>
+          <label class="control-label" for="disabledInput">Cambiar Estado:</label>
+          <!--ESTADO DE LA CENTRAL ELECTRICA-->
+          <select class="custom-select" id="inputGroupSelect01">
+            <option selected>Choose...</option>
+            <option value="1">Iniciar Maquinas</option>
+            <option value="3">Apagar Maquinas</option>
+            <option value="3">Reparar</option>
+          </select>
+        </fieldset>
+      </div>
+      <button (click)="toVisualizacion()" type="button" class="mb-3 btn btn-block btn-warning">Crear Informe</button>
+      <button type="button" class="btn btn-block btn-success">Ver Prediccion</button>
+    </div>
+  </div>
+</div>
+<div *ngIf="this.appcomponent.islogged" class="col-md-12 d-flex justify-content-center">
+  <div class="col-md-10 fondo pb-5 border-bottom border-right border-left shadow-lg rounded row">
+    <div class="col-md-6 text-center">
+      <h1>Valor GW Ultimas 24 Horas</h1>
+      <!--PASAR A MODULOS (VALOR GW)-->
+      <div class="card w-100" style="width: 18rem;">
+
+        <!--GRAFICA VALOR-->
+        <app-valor></app-valor>
+
+      </div>
+    </div>
+    <div class="col-md-6 text-center">
+      <h1>GW Generados Ultimas 24 horas</h1>
+      <!--PASAR A MODULOS (GW GENERADOS)-->
+      <div class="card w-100" style="width: 18rem;">
+
+        <!--GRAFICA PRODUCCION-->
+        <app-produccion></app-produccion>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+<div *ngIf="false" class="col-md-4 text-center">
+  <h1>Tiempo Promedio Estados</h1>
+  PASAR A MODULOS (TIEMPO PROMEDIO ESTADOS)
+  <div class="card w-100" style="width: 18rem;">
+    <div class="chart-wrapper">
+      <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
+        [options]="pieChartOptions" [plugins]="pieChartPlugins" [legend]="pieChartLegend">
+      </canvas>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+        content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
+<div *ngIf="!this.appcomponent.islogged" class="col-md-12 pt-5 d-flex justify-content-center">
+  <div class="col-md-10 fondo pt-5 w-100 border-bottom border-right border-left shadow-lg rounded row">
+    <h1>NO TIENE PERMISOS O NO HA INGRESADO</h1>
+  </div>
+</div>
+-->

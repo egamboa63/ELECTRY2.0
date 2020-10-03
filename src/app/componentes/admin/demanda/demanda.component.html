@@ -1,0 +1,12 @@
+<h1>VARIACION DE LA DEMANDA</h1>
+<div class="btn-group d-flex bd-highlight" role="group" aria-label="Basic example">
+  <button type="button" class="flex-fill bd-highlight btn btn-info pt-3 pb-3">ULTIMOS 10 MINUTOS</button>
+  <button type="button" class="flex-fill bd-highlight btn btn-info">ULTIMA HORA</button>
+  <button type="button" class="flex-fill bd-highlight btn btn-info">ULTIMAS 24 HORAS</button>
+</div>
+<!--PASAR A MODULOS (GRAFICA DEMANDA)-->
+<div class="chart-wrapper">
+  <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+    [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" [plugins]="lineChartPlugins">
+  </canvas>
+</div>
